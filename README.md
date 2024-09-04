@@ -1,32 +1,31 @@
-<div align="center">
-  <a href="https://elementary.io" align="center">
-    <center align="center">
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/elementary/brand/master/logomark-white.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/elementary/brand/master/logomark-black.png">
-  <img src="https://raw.githubusercontent.com/elementary/brand/master/logomark-black.png" alt="elementary" align="center" height="200">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/H0rizonPr0ject/horizon/master/.github/horizon.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/H0rizonPr0ject/horizon/master/.github/horizon.svg">
+  <img src="https://raw.githubusercontent.com/H0rizonPr0ject/horizon/master/.github/horizon.svg" alt="horizon" align="center" height="200">
 </picture>
     </center>
   </a>
   <br>
-  <h1 align="center"><center>elementary OS</center></h1>
   <h3 align="center"><center>Build scripts for image creation</center></h3>
   <br>
   <br>
 </div>
 
 <p align="center">
-  <img src="https://github.com/elementary/os/workflows/stable/badge.svg" alt="Stable">
+<!--  <img src="https://github.com/elementary/os/workflows/stable/badge.svg" alt="Stable">
   <img src="https://github.com/elementary/os/actions/workflows/daily-8.0.yml/badge.svg" alt="Daily 8.0">
-  <img src="https://github.com/elementary/os/actions/workflows/daily-arm.yml/badge.svg" alt="Daily ARM">
+  <img src="https://github.com/elementary/os/actions/workflows/daily-arm.yml/badge.svg" alt="Daily ARM"> -->
 
 </p>
 
 ---
+## Special Thanks
+[elementaryOS Team](https://github.com/elementary/) for their [ISO build script](https://github.com/elementary/os/)
 
 ## Building Locally
 
-As elementary OS is built with the Debian version of `live-build`, not the Ubuntu patched version, it's easiest to build an elementary .iso in a Debian VM or container. This prevents messing up your host system too.
+As horizon is built with the Debian version of `live-build`, not the Ubuntu patched version, it's easiest to build an horizon .iso in a Debian VM or container. This prevents messing up your host system too.
 
 The following examples assume you have Docker correctly installed and set up, and that your current working directory is this repo. When done, your image will be in the `builds` folder.
 

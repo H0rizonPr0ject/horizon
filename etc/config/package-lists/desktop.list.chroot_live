@@ -1,1 +1,15 @@
-elementary-live
+# base live system
+btrfs-progs
+casper
+cifs-utils
+discover
+distinst
+dmraid
+expect
+gparted
+io.elementary.installer
+mokutil
+os-prober
+reiserfsprogs
+wamerican
+xfsprogs
