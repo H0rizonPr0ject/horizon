@@ -7,7 +7,6 @@ distinst
 dmraid
 expect
 gparted
-io.elementary.installer
 mokutil
 os-prober
 reiserfsprogs
