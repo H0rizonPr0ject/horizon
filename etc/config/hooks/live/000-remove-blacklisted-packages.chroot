@@ -1,21 +1,8 @@
 #!/bin/sh
-# Description: Checkout seed branches and remove blacklisted packages
+systemctl enable gdm
+echo "Hidden=true" > /usr/share/applications/nm-connection-editor.desktop
+echo "Hidden=true" > /usr/share/applications/gnome-language-selector.desktop
+#apt autoremove -y humanity-icon-theme yelp-xsl yelp
 
-echo "P: Begin executing remove-blacklisted-packages chroot hook..."
+apt remove yelp-xsl yelp
 
-export LSB_OS_RELEASE="/usr/lib/upstream-os-release"
-dist="$(lsb_release -c -s)"
-unset LSB_OS_RELEASE
-
-apt-get install --no-install-recommends -f -q -y git
-
-git clone --depth 1 https://github.com/elementary/seeds.git --single-branch --branch "$dist"
-git clone --depth 1 https://github.com/elementary/platform.git --single-branch --branch "$dist"
-
-for package in $(cat 'platform/blacklist' 'seeds/blacklist' | grep -v '#'); do
-    apt-get autoremove --purge -f -q -y "$package"
-done
-
-apt-get autoremove --purge -f -q -y git
-
-rm -R ../seeds ../platform

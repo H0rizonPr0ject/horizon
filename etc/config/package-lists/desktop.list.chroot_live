@@ -11,3 +11,8 @@ os-prober
 reiserfsprogs
 wamerican
 xfsprogs
+grub-common
+distinst
+io.elementary.installer
+lvm2
+kpartx

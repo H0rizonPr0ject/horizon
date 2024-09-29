@@ -1,1 +1,3 @@
+deb https://ppa.launchpadcontent.net/elementary-os/stable/ubuntu noble main 
+deb-src https://ppa.launchpadcontent.net/elementary-os/stable/ubuntu noble main 
 

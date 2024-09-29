@@ -24,13 +24,14 @@ echo -e "
 "
 
 apt-get update
-apt-get install -y live-build patch gnupg2 binutils zstd
+apt-get install -y live-build patch gnupg2 binutils zstd debian-keyring debian-archive-keyring
+apt-get update
 
 # The Debian repositories don't seem to have the `ubuntu-keyring` or `ubuntu-archive-keyring` packages
 # anymore, so we add the archive keys manually. This may need to be updated if Ubuntu changes their signing keys
 # To get the current key ID, find `ubuntu-keyring-xxxx-archive.gpg` in /etc/apt/trusted.gpg.d on a running
-# system and run `gpg --keyring /etc/apt/trusted.gpg.d/ubuntu-keyring-xxxx-archive.gpg --list-public-keys `
-apt-key adv --recv-keys --keyserver keyserver.ubuntu.com F6ECB3762474EDA9D21B7022871920D1991BC93C
+# system and run `gpg --keyring /etc/apt/trusted.gpg.d/ubuntu-keyring-xxxx-archive.gpg --list-public-keys `s
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com CF301D72D80BF71D669D47791FFE41D2D8AC95C9
 
 # TODO: This patch was submitted upstream at:
 # https://salsa.debian.org/live-team/live-build/-/merge_requests/314
@@ -70,7 +71,7 @@ build () {
 # LIVE-BUILD CONFIG #
 #-------------------#
 "
-  lb config
+  lb config --mode debian
 
   echo -e "
 #------------------#
@@ -85,10 +86,14 @@ build () {
 #---------------------------#
 "
 
-  YYYYMMDD="$(date +%Y%m%d)"
+  YEAR="$(date +%Y)"
+  MONTH="$(date +%m)"
+  DATE="$(date +%d)"
+  HOUR="$(date +%H)"
+  MINUTES="$(date +%M)"
   OUTPUT_DIR="$BASE_DIR/builds/$BUILD_ARCH"
   mkdir -p "$OUTPUT_DIR"
-  FNAME="elementaryos-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
+  FNAME="horizon-$VERSION-$YEAR-$MONTH-$DATE.$HOUR-$MINUTES-$OUTPUT_SUFFIX"
   mv "$BASE_DIR/tmp/$BUILD_ARCH/live-image-$BUILD_ARCH.hybrid.iso" "$OUTPUT_DIR/${FNAME}.iso"
 
   # cd into output to so {FNAME}.sha256.txt only

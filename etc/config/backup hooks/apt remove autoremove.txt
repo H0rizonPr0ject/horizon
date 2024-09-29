@@ -1,0 +1,1 @@
+apt remove --autoremove -y humanity-icon-theme language-selector-gnome software-properties-gtk ubuntu-advantage-desktop-daemon ubuntu-advantage-tools ubuntu-docs ubuntu-mono ubuntu-pro* ubuntu-wallpapers ubuntu-wallpapers-noble yaru-theme-gnome-shell yelp*
