@@ -24,7 +24,7 @@ echo -e "
 "
 
 apt-get update
-apt-get install -y live-build patch gnupg2 binutils zstd debian-keyring debian-archive-keyring
+apt-get install -y live-build patch gnupg2 binutils zstd debian-keyring debian-archive-keyring ca-certificates
 apt-get update
 
 # The Debian repositories don't seem to have the `ubuntu-keyring` or `ubuntu-archive-keyring` packages
@@ -78,6 +78,11 @@ build () {
 # LIVE-BUILD BUILD #
 #------------------#
 "
+#  wget https://ftp-master.debian.org/keys/release-12.asc -qO- | gpg --import --no-default-keyring --keyring ./debian-release-12.gpg
+#  wget https://ftp-master.debian.org/keys/archive-key-12.asc -qO- | gpg --import --no-default-keyring --keyring ./archive-key-12.gpg
+#  wget https://ftp-master.debian.org/keys/archive-key-12-security.asc -qO- | gpg --import --no-default-keyring --keyring ./archive-key-12-security.gpg
+#  debootstrap --keyring=/usr/share/keyrings/debian-archive-bookworm-stable.gpg bookworm /srv/bookworms
+  
   lb build
 
   echo -e "
