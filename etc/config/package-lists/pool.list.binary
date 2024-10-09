@@ -6,6 +6,7 @@ iucode-tool
 open-vm-tools-desktop
 setserial
 user-setup
+broadcom-sta-dkms=6.30.223.271-23ubuntu1
 
 efibootmgr
 secureboot-db

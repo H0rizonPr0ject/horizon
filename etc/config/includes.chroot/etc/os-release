@@ -1,0 +1,10 @@
+PRETTY_NAME="Horizon Fitz Roy"
+NAME="Fitz Roy"
+VERSION_ID="1.0"
+VERSION="Fitz Roy"
+VERSION_CODENAME="Fitz Roy"
+ID=horizon
+ID_LIKE=ubuntu
+ID_LIKE=debian
+UBUNTU_CODENAME=noble
+LOGO=horizon-logo

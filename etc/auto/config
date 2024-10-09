@@ -51,6 +51,8 @@ lb config noauto \
 # replace channel and suite
 sed -i "s/@CHANNEL/$CHANNEL/" config/archives/*.list*
 sed -i "s/@BASECODENAME/$BASECODENAME/" config/archives/*.list*
+# sed -i "s/@CHANNEL/$CHANNEL/" config/archives/*.sources*
+# sed -i "s/@BASECODENAME/$BASECODENAME/" config/archives/*.sources*
 
 DATE=$(date +%Y%m%d)
 sed -i "s/@CHANNEL/$CHANNEL/" config/includes.binary/.disk/info

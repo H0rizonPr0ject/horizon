@@ -1,11 +1,11 @@
 #base system
+horizon-minimal
 adduser
 apt
 apt-utils
 console-setup
 debconf
 debconf-i18n
-dhcpcd-base
 e2fsprogs
 eject
 init
@@ -29,13 +29,15 @@ sudo
 tzdata
 ubuntu-keyring
 udev
-vim-tiny
 whiptail
+language-pack-*
+open-vm-tools
 
 #desktop
 gnome-backgrounds
 gnome-browser-connector
 gnome-calendar
+gnome-calculator
 gnome-color-manager
 gnome-console
 gnome-session
@@ -44,13 +46,28 @@ gnome-software
 gnome-software-common
 gnome-software-plugin-flatpak
 gnome-software-plugin-snap
-gnome-tweaks
 gnome-user-share
-gnome-video-effects wireplumber
+gnome-video-effects
+wireplumber
 gdm3
 gnome-text-editor
 gnome-control-center
 gnome-settings-daemon
+gnome-system-monitor
+gnome-disk-utility
+gnome-font-viewer
+gnome-characters
+totem
+gthumb
+nautilus
+horizon-settings
+horizon-backgrounds
+gnome-initial-setup=47.0.44666777444333366666.1
+
+
+#other
+nano
+firefox-esr
 
 @XORG_HWE
 @KERNEL_HEADERS

@@ -1,0 +1,2 @@
+deb [trusted=yes] https://ppa.launchpadcontent.net/horizonlinux/horizonrepo/ubuntu/ noble main
+deb [trusted=yes] https://ppa.launchpadcontent.net/horizonlinux/horizonrepo/ubuntu/ oracular main

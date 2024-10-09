@@ -11,3 +11,10 @@ os-prober
 reiserfsprogs
 wamerican
 xfsprogs
+grub-common
+distinst
+io.elementary.installer
+#vanilla-installer
+#horizon-installer
+lvm2
+kpartx=0.9.4-5ubuntu8

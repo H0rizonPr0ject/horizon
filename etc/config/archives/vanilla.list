@@ -1,0 +1,2 @@
+deb [trusted=yes] https://ppa.launchpadcontent.net/vanilla-os/stable/ubuntu kinetic main 
+deb-src [trusted=yes] https://ppa.launchpadcontent.net/vanilla-os/stable/ubuntu kinetic main 
